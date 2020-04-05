@@ -42,6 +42,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
     
     return res.status(200).sendFile(path, () => {
     	// Todo local files
+    	deleteLocalFiles([path])
       });
   });
   // Root Endpoint
